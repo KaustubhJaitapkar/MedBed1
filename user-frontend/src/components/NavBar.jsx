@@ -23,7 +23,7 @@ function NavBar() {
     const handleLogOut = async () => {
         try {
             // Send a logout request to the server
-            await axios.post('http://https://medbed1.onrender.com/api/v1/users/logout', {}, { withCredentials: true });
+            await axios.post('https://medbed1.onrender.com/api/v1/users/logout', {}, { withCredentials: true });
         } catch (error) {
             console.error('Error logging out:', error);
         }

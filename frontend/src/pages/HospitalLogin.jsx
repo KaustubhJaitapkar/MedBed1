@@ -11,7 +11,7 @@ function HospitalLogin() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://https://medbed1.onrender.com/api/v1/hospitals/login', {
+      const response = await axios.post('https://medbed1.onrender.com/api/v1/hospitals/login', {
         hospital_id: hospitalId,
         password: password
       });

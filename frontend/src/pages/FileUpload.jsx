@@ -12,7 +12,7 @@ function FileUpload() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    // const url = 'http://https://medbed1.onrender.com/uploadFile';
+    // const url = 'https://medbed1.onrender.com/uploadFile';
     const formData = new FormData();
     formData.append('file', file);
 
