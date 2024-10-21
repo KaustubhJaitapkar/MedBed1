@@ -6,7 +6,6 @@ dotenv.config({
 })
 
 
-
 connectDB()
     .then(() => {
         app.listen(8000, () => {

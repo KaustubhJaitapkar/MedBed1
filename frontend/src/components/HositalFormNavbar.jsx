@@ -96,7 +96,7 @@ function HospitalFormNavbar() {
     //     try {
     //         console.log("hello " , finalData);
     //         const response = await axios.post(
-    //             'http://localhost:8000/api/v1/hospitals/createHospital',
+    //             'https://medbed1.onrender.com/api/v1/hospitals/createHospital',
     //             finalData,
     //             {
     //                 headers: { 'Content-Type': 'multipart/form-data' },
@@ -117,7 +117,7 @@ function HospitalFormNavbar() {
             }
 
             try {
-                const response = await axios.get(`http://localhost:8000/api/v1/hospitals/getHospitalById`, {
+                const response = await axios.get(`https://medbed1.onrender.com/api/v1/hospitals/getHospitalById`, {
                     params: {
                         requestId: hospitalId
                     }

@@ -8,7 +8,7 @@ function ProtectedRoute({ element, children }) {
 
     const checkAuth = async () => {
         try {
-            await axios.get('http://localhost:8000/api/v1/users/protected-route', {
+            await axios.get('https://medbed1.onrender.com/api/v1/users/protected-route', {
                 withCredentials: true,
             });
             setIsAuthenticated(true);
