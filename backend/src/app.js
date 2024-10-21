@@ -8,7 +8,7 @@ const app = express();
 
 app.use(
     cors({
-      origin: "https://med-bed1-hospital-frontend.vercel.app/",
+      origin: "https://med-bed1-hospital-frontend.vercel.app",
       methods: ["GET", "POST", "DELETE", "UPDATE", "PUT"],
       credentials: true,
       // allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'device-remember-token', 'Access-Control-Allow-Origin', 'Origin', 'Accept']
