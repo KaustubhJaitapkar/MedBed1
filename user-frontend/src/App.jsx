@@ -16,8 +16,9 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path='/' element={<><Home /><Footer /></>} />
-            <Route path='/register' element={<Register />} />
             <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Register />} />
+            
             <Route path='/reserveBed/:hospitalId' element={
               <ProtectedRoute>
                 <>
