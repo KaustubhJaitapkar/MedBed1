@@ -17,7 +17,7 @@ const HospitalHome = () => {
         setLoading(true);
 
         // Make request to the new endpoint with hospitalId
-        const { data } = await axios.get(`http://localhost:3000/api/v1/users/get-payment-info-hospital/${hospitalId}`);
+        const { data } = await axios.get(`http://https://medbed1.onrender.com/api/v1/users/get-payment-info-hospital/${hospitalId}`);
 
         // Handle the response and set the state with reservation data
         if (data && data.data) {

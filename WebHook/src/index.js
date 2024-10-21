@@ -42,12 +42,12 @@
 //                 lastCounterValue = hospital.counter; // Update the last known value
 //                 console.log(lastCounterValue);
                 
-//                 // Hit the other server on localhost:3000 when the counter changes
+//                 // Hit the other server on https://medbed1.onrender.com when the counter changes
 //                 await axios.post("http://localhost:3002/notify", {
 //                     hospital_id: HOSPITAL_ID,
 //                     new_counter: hospital.counter
 //                 });
-//                 console.log("Notification sent to localhost:3000");
+//                 console.log("Notification sent to https://medbed1.onrender.com");
 //             }
 //             else{
 //                 console.log("Counter is not change");
@@ -229,11 +229,11 @@ const pollDatabases = async () => {
             console.log(`Counters changed! Sending all values:`, updatedCounters);
 
             // Send the updated data to the other server
-            await axios.post("http://localhost:3000/api/v1/users/notify", {
+            await axios.post("http://https://medbed1.onrender.com/api/v1/users/notify", {
                 data: updatedCounters, // Send the entire map of hospital_id: counter
             });
 
-            console.log("Notification sent to localhost:3000 with all updated data");
+            console.log("Notification sent to https://medbed1.onrender.com with all updated data");
         } else {
             console.log("No changes detected");
         }

@@ -11,7 +11,7 @@
 //     // Fetch hospital data from the backend
 //     const fetchHospitalData = async () => {
 //       try {
-//         const response = await axios.get('http://localhost:3000/api/v1/hospitals/getAllHospitals');
+//         const response = await axios.get('http://https://medbed1.onrender.com/api/v1/hospitals/getAllHospitals');
 //         setHospitals(response.data); // Assuming the API returns a list of hospitals
 //         setLoading(false);
 //         console.log(response.data);
@@ -71,7 +71,7 @@ const HospitalList = () => {
     // Fetch hospital data from the backend once
     const fetchHospitalData = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/v1/hospitals/getAllHospitals');
+        const response = await axios.get('http://https://medbed1.onrender.com/api/v1/hospitals/getAllHospitals');
         setAllHospitals(response.data); // Store all hospitals in state
         setLoading(false);
       } catch (error) {
@@ -83,7 +83,7 @@ const HospitalList = () => {
     // Fetch available beds data from the backend every 10 seconds
     const fetchAvailableBeds = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/v1/users/getAvailbleBeds');
+        const response = await axios.get('http://https://medbed1.onrender.com/api/v1/users/getAvailbleBeds');
         setHospitalData(response.data); // Assuming API returns data in the format: { hospitalId: availableBeds }
       } catch (error) {
         console.error('Error fetching available beds:', error);
