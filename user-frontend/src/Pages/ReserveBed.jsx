@@ -51,13 +51,12 @@ const RazorpayPayment = () => { // Accept hospitalId as a prop
     // const accessToken = Cookies.get("accessToken");
     const accessToken = localStorage.getItem("accessToken") || Cookies.get("accessToken");
     
+    console.log("cookies",document.cookie); 
     console.log("hello" , accessToken);
     console.log(accessToken);
 
     const allCookies = document.cookie;
     console.log('All cookies:', allCookies);
-
-    // Store token in localStorage as fallback
     
 
     
