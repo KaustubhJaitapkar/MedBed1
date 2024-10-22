@@ -21,18 +21,20 @@ const HospitalCard = ({ hospital,availableBeds }) => {
     }
 
     const handleReserveBedClick = async () => {
-        try {
-            const response = await axios.get('/api/auth/verify');
-            if (response.status === 200) {
-                navigate(`/reserveBed/${hospital.hospital.id}`);
-            }
-        } catch (error) {
-            if (error.response?.status === 401) {
-                navigate('/login');
-            } else {
-                console.error("Error checking authentication", error);
-            }
-        }
+        // try {
+        //     // const response = await axios.get('https://medbed1.onrender.com/api/v1/users');
+        //     if (response.status === 200) {
+        //         navigate(`/reserveBed/${hospital.hospital.id}`);
+        //     }
+        // } catch (error) {
+        //     if (error.response?.status === 401) {
+        //         navigate('/login');
+        //     } else {
+        //         console.error("Error checking authentication", error);
+        //     }
+        // }
+
+        navigate(`/reserveBed/${hospital.hospital.id}`);
     };
 
     const handleClick = () => {
