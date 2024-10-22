@@ -1,19 +1,20 @@
 import React, { useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom'; // Import useNavigate from react-router-dom
+import Cookies from 'js-cookie';
 
-const getCookie = (cookieName) => {
-  const name = cookieName + "=";
-  const decodedCookie = decodeURIComponent(document.cookie);
-  const cookieArray = decodedCookie.split(';');
-  for (let i = 0; i < cookieArray.length; i++) {
-    let cookie = cookieArray[i].trim();
-    if (cookie.indexOf(name) === 0) {
-      return cookie.substring(name.length, cookie.length);
-    }
-  }
-  return null;
-};
+// const getCookie = (cookieName) => {
+//   const name = cookieName + "=";
+//   const decodedCookie = decodeURIComponent(document.cookie);
+//   const cookieArray = decodedCookie.split(';');
+//   for (let i = 0; i < cookieArray.length; i++) {
+//     let cookie = cookieArray[i].trim();
+//     if (cookie.indexOf(name) === 0) {
+//       return cookie.substring(name.length, cookie.length);
+//     }
+//   }
+//   return null;
+// };
 
 const RazorpayPayment = () => { // Accept hospitalId as a prop
   const navigate = useNavigate(); // Initialize the navigate function
@@ -45,8 +46,9 @@ const RazorpayPayment = () => { // Accept hospitalId as a prop
       return;
     }
 
-    const accessToken = getCookie("accessToken");
+    // const accessToken = getCookie("accessToken");
     // const accessToken = localStorage.getItem("accessToken");
+    const accessToken = Cookies.get("accessToken");
     console.log(accessToken);
     console.log(accessToken);
     
