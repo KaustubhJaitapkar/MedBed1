@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom'; // Import useNavigate from react-router-dom
-import Cookies from 'js-cookies';
 
 const getCookie = (cookieName) => {
   const name = cookieName + "=";
