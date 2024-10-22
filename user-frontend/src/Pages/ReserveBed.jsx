@@ -51,6 +51,9 @@ const RazorpayPayment = () => { // Accept hospitalId as a prop
     const accessToken = Cookies.get("accessToken");
     console.log("hello" , accessToken);
     console.log(accessToken);
+
+    const allCookies = document.cookie;
+    console.log('All cookies:', allCookies);
     
     if (!accessToken) {
       alert("User not logged in.");
