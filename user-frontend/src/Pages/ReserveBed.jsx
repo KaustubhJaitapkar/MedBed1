@@ -45,8 +45,8 @@ const RazorpayPayment = () => { // Accept hospitalId as a prop
       return;
     }
 
-    // const accessToken = getCookie("accessToken");
-    const accessToken = localStorage.getItem("accessToken");
+    const accessToken = getCookie("accessToken");
+    // const accessToken = localStorage.getItem("accessToken");
     console.log(accessToken);
     console.log(accessToken);
     
