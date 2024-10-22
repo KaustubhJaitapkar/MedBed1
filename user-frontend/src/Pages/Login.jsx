@@ -14,6 +14,10 @@ function LoginForm() {
     navigate('/');
   };
 
+  const navigateToRegister = () => {
+    navigate('/register');
+  }
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -68,7 +72,7 @@ function LoginForm() {
           </button>
         </form>
         <p className="text-center mt-4 text-sm">
-          Don't have an account? <a href="/register" className="text-blue-600 hover:underline">Register</a>
+          Don't have an account? <a onClick={navigateToRegister} className="text-blue-600 hover:underline">Register</a>
         </p>
       </div>
     </div>
