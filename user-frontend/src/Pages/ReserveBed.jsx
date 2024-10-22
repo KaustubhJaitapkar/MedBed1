@@ -76,7 +76,7 @@ const RazorpayPayment = () => { // Accept hospitalId as a prop
           headers: {
             Authorization: `Bearer ${accessToken}`, // Bearer token from cookies
           },
-        })
+        },{ withCredentials: true })
           .then(res => {
             console.log("Reservation created:", res.data);
             alert("Reservation successful!");
