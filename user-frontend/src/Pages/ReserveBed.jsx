@@ -50,7 +50,7 @@ const RazorpayPayment = () => { // Accept hospitalId as a prop
     // const accessToken = localStorage.getItem("accessToken");
     // const accessToken = Cookies.get("accessToken");
     const accessToken = localStorage.getItem("accessToken") || Cookies.get("accessToken");
-      
+
     console.log("cookies",document.cookie); 
     console.log("hello" , accessToken);
     console.log(accessToken);
@@ -60,10 +60,10 @@ const RazorpayPayment = () => { // Accept hospitalId as a prop
     
 
     
-    if (!accessToken) {
-      alert("User not logged in.");
-      return;
-    }
+    // if (!accessToken) {
+    //   alert("User not logged in.");
+    //   return;
+    // }
 
     // Decode the token to get userId, assuming JWT
     const decodedToken = decodeToken(accessToken);
