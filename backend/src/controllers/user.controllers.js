@@ -168,13 +168,13 @@ const loginUser = asyncHandler(async (req, res) => {
   });
 
   const options = {
-    httpOnly: true,
+    httpOnly: false,
     secure: true,
     sameSite: "None"
   };
 
 
-  res.cookie("accessToken", accessToken);
+  res.cookie("accessToken", accessToken, options);
   return res.status(200).json(
     new ApiResponse(
       200,
